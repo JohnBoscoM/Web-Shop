@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -15,6 +15,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.1" />
+    <PackageReference Include="SpotifyAPI.Web" Version="5.1.0" />
+    <PackageReference Include="SpotifyAPI.Web.Auth" Version="5.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +24,22 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\Model\Cart.ts" />
+    <None Remove="ClientApp\src\app\Model\Customer.ts" />
+    <None Remove="ClientApp\src\app\Model\Product.ts" />
+    <None Remove="ClientApp\src\app\product\product.component.ts" />
+    <None Remove="ClientApp\src\app\services\product.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\Model\Cart.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Model\Customer.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Model\Product.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\product\product.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\product.service.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

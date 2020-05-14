@@ -1,0 +1,83 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+}
+
+.menu-placement {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+}
+
+.brand-placement {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.inner-menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width:100%
+}
+
+.inner-logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'Amatic SC', cursive;
+  color:white;
+  font-size: 50px;
+}
+.bg-black{
+    background-color:black;
+}
+
+.bg-img {
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  filter: brightness(50%);
+  -webkit-filter: blur(4px);
+  width: 100%;
+}

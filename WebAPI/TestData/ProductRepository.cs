@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.Interface;
-using WebAPI.Models;
+using WebAPI.Data.Models;
 
 namespace WebAPI.TestData
 {
@@ -24,14 +24,16 @@ namespace WebAPI.TestData
             Products.Add(Product4);
             Products.Add(Product5);
         }
-       public List<Product> GetProducts()
-        {
-            return Products;
-        }
+       
 
-        public Product GetProduct(int id)
+        public async Task<Product> GetProduct(int id)
         {
             return Products.FirstOrDefault(p => p.Id == id);
+        }
+
+        public async Task<List<Product>> GetProducts()
+        {
+            return Products;
         }
 
     }

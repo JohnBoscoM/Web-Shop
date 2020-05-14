@@ -4,12 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.Interface;
-using WebAPI.TestData;
+using WebAPI.Data.Repository;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebAPI.Controllers
 {
+    [ApiController]
     [Route("api/[controller]")]
     public class ProductController : Controller
     {
@@ -24,7 +25,7 @@ namespace WebAPI.Controllers
         {
             try
             {
-                var products = await productRepository.GetProducts();
+                var products =  productRepository.GetProducts();
                 return Ok(products);
             }
             catch (Exception e)
@@ -39,7 +40,7 @@ namespace WebAPI.Controllers
         {
             try
             {
-                var product = await productRepository.GetProduct(id);
+                var product = productRepository.GetProduct(id);
                 return Ok(product);
             }
             catch(Exception e)

@@ -1,0 +1,45 @@
+<header>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent">
+    <div class="flex-container">
+      <div class="inner-menu-container" style="margin-top:30px;">
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item">
+            <span class="material-icons" style="margin-right:17px;">
+              more_vert
+            </span>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item">
+            <span class="material-icons">
+              search
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="inner-logo-container">
+        <a class="navbar-brand" [routerLink]="['/']" style="font-size: 50px;">ChillTunez</a>
+        <div>
+          <a class="navbar-brand" [routerLink]="['/']"><img src="assets/Icons/Spotify_Logo_CMYK_Black.png" style="height: 40px;" /></a>
+        </div>
+     
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target=".navbar-collapse"
+                aria-label="Toggle navigation"
+                [attr.aria-expanded]="isExpanded"
+                (click)="toggle()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+             [ngClass]="{ show: isExpanded }">
+        </div>-->
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,94 @@
+.image-size{
+    width:100%;
+
+}
+
+.blur-effect {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+.darken-img {
+  /*filter: brightness(50%);
+  -webkit-filter: brightness(50%);*/
+  background-image: url("../../assets/img/Spring 2020.jpg");
+  height:500px;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  font-family: 'Amatic SC', cursive;
+
+}
+.hero-image {
+  max-width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/img/Spring 2020.jpg");
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+.hero-text-style {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*transform: translate(-50%, -50%);*/
+  color: white;
+}
+
+.btn {
+  border-radius: 40px;
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+  .btn :hover {
+    width: 160px;
+    background: #ffd19a;
+    box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
+  }
+h1 {
+  text-align: center;
+  color:white; 
+}
+
+h3 {
+  text-align: center;
+  color:white;
+}
+
+span {
+  text-align: center;
+}
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+}
